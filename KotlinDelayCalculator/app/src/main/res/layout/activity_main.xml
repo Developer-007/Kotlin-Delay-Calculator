@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textTetle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите длительность/ноту:"
+            android:textSize="25sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTetle"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/whole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_200"
+                android:checked="true"
+                android:text="𝅝"
+                android:textSize="35sp" />
+
+            <RadioButton
+                android:id="@+id/half"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_200"
+                android:textSize="35sp"
+                android:text="𝅗𝅥" />
+
+            <RadioButton
+                android:id="@+id/quarter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_200"
+                android:textSize="35sp"
+                android:text="𝅘𝅥" />
+
+            <RadioButton
+                android:id="@+id/eighth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_200"
+                android:textSize="35sp"
+                android:text="𝅘𝅥𝅮" />
+
+            <RadioButton
+                android:id="@+id/sixteenth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_200"
+                android:textSize="35sp"
+                android:text="𝅘𝅥𝅯" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/tempoLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/radioGroup">
+
+            <TextView
+                android:id="@+id/tempoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="Темп:"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/tempoEnter"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@color/W"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delayLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tempoLayer">
+
+            <TextView
+                android:id="@+id/delayText"
+                android:layout_width="40sp"
+                android:layout_height="60sp"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="Время задержки, мс:"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/delayCalc"
+                android:layout_width="40sp"
+                android:layout_height="60sp"
+                android:layout_weight="1"
+                android:background="@color/W"
+                android:textSize="25sp"
+                android:text=""
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calc_button"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/purple_200"
+            android:textSize="18sp"
+            android:text="Рассчитать время задержки"
+            android:layout_alignParentBottom="true"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
